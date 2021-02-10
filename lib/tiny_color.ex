@@ -1,6 +1,19 @@
 defmodule TinyColor do
   @moduledoc """
-  Documentation for `TinyColor`.
+  TinyColor is an elixir port of the javascript tinycolor2 library used to manipulate color values
+  and convert them to different color spaces. Alpha is supported for all color spaces.
+
+  Currently it supports RGB, HSV, HSL, and the OKLab color space. All supported color spaces can
+  be used in any method; however, most operations are implemented by converting the provided color
+  into a specific color space, and so there will be some additional accuracy loss.
+
+  ## Parsing CSS colors
+  `TinyColor.parser` defines a parser that will interpret CSS Level 3 compliant color codes into
+  the appropriate TinyColor struct.
+
+  ## Rendering colors in html and json
+  TinyColor implements the protocol for Jason and Phoenix so that colors can be directly rendered in
+  both HTML and json responses as css compatible color codes.
   """
 
   @white %TinyColor.RGB{red: 255, green: 255, blue: 255}
