@@ -31,7 +31,8 @@ defmodule TinyColor.MixProject do
     [
       {:jason, "~> 1.2"},
       {:phoenix_html, "~> 2.13"},
-      {:nimble_parsec, "~> 1.1.0"}
+      {:nimble_parsec, "~> 1.1.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
