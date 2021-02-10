@@ -317,7 +317,10 @@ defmodule TinyColor do
     (max(c1_luminance, c2_luminance) + 0.05) / (min(c1_luminance, c2_luminance) + 0.05)
   end
 
-  @spec readable?(color(), color(), Keyword.t([{:level, :AA | :AAA}, {:size, :small | :large}])) ::
+  @type font_size_option :: {:size, :small | :large}
+  @type contrast_level_option :: {:level, :AA | :AAA}
+
+  @spec readable?(color(), color(), [font_size_option() | contrast_level_option()]) ::
           boolean()
   def readable?(color1, color2, opts \\ []) do
     level = Keyword.get(opts, :level, :AA)
