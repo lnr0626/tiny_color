@@ -8,6 +8,9 @@ defmodule TinyColor.MixProject do
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      description: """
+      An elixir port of the @ctrl/tinycolor typescript port of the original tinycolor2 javascript package.
+      """,
       package: package()
     ]
   end
