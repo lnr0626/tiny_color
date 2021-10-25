@@ -4,7 +4,7 @@ defmodule TinyColor.MixProject do
   def project do
     [
       app: :tiny_color,
-      version: "0.1.2",
+      version: "0.2.0",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -33,7 +33,7 @@ defmodule TinyColor.MixProject do
   defp deps do
     [
       {:jason, "~> 1.2"},
-      {:phoenix_html, "~> 2.13"},
+      {:phoenix_html, "~> 2.0 or ~> 3.0"},
       {:nimble_parsec, "~> 1.1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
